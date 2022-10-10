@@ -1,0 +1,198 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+}
+
+html, body {
+  font-family: Montserrat;
+  font-size: 10px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 4.8em;
+  text-transform: uppercase;
+  line-height: 1.5em;
+}
+
+.header h1 {
+  color: #BF1E77;
+}
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.header-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 37px 0 17px;
+}
+.header-location {
+  position: relative;
+  margin-left: auto;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+.header-location::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -26px;
+  height: 16px;
+  width: 16px;
+  background: no-repeat url(/src/icon/location.svg);
+}
+.header-input {
+  margin-left: 50px;
+  display: block;
+  height: 40px;
+  width: 300px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  background-color: #FBF7F4;
+  border-radius: 4px;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: #545155;
+}
+.header-contact {
+  margin-left: 61px;
+  text-align: right;
+}
+.header-contact a {
+  font-weight: 500;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+.header-contact p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+.header-list {
+  margin-left: 28px;
+  display: flex;
+  flex-direction: row;
+  background-color: #FBF7F4;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.header-list a {
+  height: 100%;
+}
+.header-list img {
+  padding: 12px 17px;
+}
+.header-list li {
+  position: relative;
+  margin: 0 -1px;
+}
+.header-list li:last-child {
+  background-color: #BF1E77;
+}
+.header-list li::after {
+  position: absolute;
+  content: "";
+  top: calc(50% - 8px);
+  right: 0;
+  display: block;
+  width: 1px;
+  height: 16px;
+  background-color: #BF1E77;
+}
+.header-menu {
+  margin-bottom: 34px;
+}
+.header-menu--list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header-menu--list li {
+  position: relative;
+  font-size: 1.6em;
+  font-weight: 500;
+  line-height: 1.5em;
+  transition: all 0.3s ease;
+}
+.header-menu--list li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #BF1E77;
+}
+.header-menu--list li:hover {
+  color: #BF1E77;
+}
+.header-menu--list li:hover::after {
+  transition: width 0.3s;
+  width: 100%;
+}
