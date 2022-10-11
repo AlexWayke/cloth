@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/itc-slider.css">
     <title>Cloth</title>
 </head>
 <body>
@@ -39,5 +40,39 @@
             </div>
         </div>
     </header>
+    <main>
+        <section class="mainscreen">
+            <div class="mainscreen-wrapper">
+                <div class="mainscreen-carousel">
+                    <div class="slider">
+                        <div class="slider__wrapper">
+                          <div class="slider__items">
+                            <div class="slider__item">
+                              <img src="/src/mainscreen/1.jpeg" alt="#">
+                            </div>
+                            <div class="slider__item">
+                                <img src="/src/mainscreen/1.jpeg" alt="#">
+                            </div>
+                            <div class="slider__item">
+                                <img src="/src/mainscreen/1.jpeg" alt="#">
+                            </div>
+                          </div>
+                        </div>
+                        <button class="slider__control" data-slide="prev">
+                            <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 4.5L5.5 0.5M1.5 4.5L5.5 8.5M1.5 4.5H14" stroke="#FBF7F4"/>
+                            </svg>
+                        </button>
+                        <button class="slider__control" data-slide="next">
+                            <svg width="64" height="9" viewBox="0 0 64 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M63.25 4.5L63.6036 4.14645L63.9571 4.5L63.6036 4.85355L63.25 4.5ZM62.8964 4.85355L58.8964 0.853553L59.6036 0.146447L63.6036 4.14645L62.8964 4.85355ZM63.6036 4.85355L59.6036 8.85355L58.8964 8.14645L62.8964 4.14645L63.6036 4.85355ZM63.25 5H0.75V4H63.25V5Z" fill="#BF1E77"/>
+                            </svg>
+                            </button>
+                      </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/js/itc-slider.min.js"></script>
 </body>
 </html>

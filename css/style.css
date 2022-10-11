@@ -196,3 +196,13 @@ html, body {
   transition: width 0.3s;
   width: 100%;
 }
+
+.mainscreen-wrapper {
+  width: 100%;
+}
+.mainscreen-carousel {
+  width: 92%;
+  height: 595px;
+  border-radius: 0 20px 20px 0;
+  overflow: hidden;
+}
