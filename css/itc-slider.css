@@ -61,6 +61,8 @@
     
     height: 500px;
     display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 .slider__buttons {
   display: flex;
@@ -117,15 +119,9 @@
 /* индикаторы */
 
 .slider__indicators {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 15;
+  z-index: 10;
   display: flex;
   justify-content: center;
-  margin: 0 15%;
-  padding-left: 0;
   list-style: none;
 }
 
