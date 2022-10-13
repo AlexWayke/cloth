@@ -294,13 +294,11 @@ html, body {
         width: 100%;
     }  
     &-item {
-        position: re;
         padding: 0 15px;
         box-sizing: border-box;
         max-width: 400px;
     }
     &-img {
-        position: relative;
         width: 370px;
         height: 370px;
         border-radius: 10px;
@@ -312,12 +310,6 @@ html, body {
         }
     }
     &-favorite {
-        position: absolute;
-        z-index: -10;
-        opacity: 0;
-        &+label {
-            display: block;
-        }
     }
     &-subtitle {
     }
