@@ -3,6 +3,7 @@
 
 // Fonts ==========================
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600);
+@import url(https://fonts.googleapis.com/css?family=Marck+Script:regular);
 
 // Main scripts =======================
 html, body {
@@ -22,6 +23,12 @@ html, body {
     font-size: 4.8em;
     text-transform: uppercase;
     line-height: 1.5em;
+}
+.section-title {
+    font-weight: 500;
+    font-size: 4.8em;
+    line-height: 1.5em;
+    text-transform: uppercase;
 }
 
 // Header =============================
@@ -157,3 +164,121 @@ html, body {
     }
 }
 
+// Sale ===============================
+.sale {
+    margin: 100px 0;
+    &-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &-item {
+        width: 31.5%;
+        padding: 40px 40px;
+        box-sizing: border-box;
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+        height: 240px;
+        background: linear-gradient( #BF1E7700, #BF1E77);
+        color: #fff;
+        display: flex;
+        gap: 10px;
+        align-items: flex-end;
+        &--bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: contain;
+            z-index: -10;
+        }
+        &--discount {
+            display: inline-block;
+            font-weight: 500;
+            font-size: 6.4em;
+            line-height: 1.1em;
+        }
+        &--title {
+            display: inline-block;
+            font-weight: 500;
+            font-size: 2.4em;
+            line-height: 1.5em;
+            text-transform: lowercase;
+        }
+    }
+}
+
+// Categories =========================
+.categories {
+    position: relative;
+    &-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 92%;
+        height: calc(100% - 150px);
+        border-radius: 20px 0 0 20px;
+        background-color: #FBF7F4;
+        z-index: -10;
+        &--title {
+            position: absolute;
+            top: 0;
+            left: calc(50% - 400px);
+            text-align: center;
+            width: 800px;
+            font-family: Marck Script;
+            font-size: 16.8em;
+            line-height: 1.1em;
+            color: #fff;
+            z-index: -10;
+        }
+    }
+    &-wrapper {
+        text-align: center;
+        padding-top: 80px;
+        box-sizing: border-box;
+    }
+    &-items {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: space-between;
+    }
+    &-item {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        padding: 30px 40px;
+        box-sizing: border-box;
+        width: 31.5%;
+        height: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        background: linear-gradient(#6F393A00 80%, #6F393A);
+        transition: background-color .3s ease;
+        text-align: left;
+        &:hover {
+            background: #BF1E7770;
+        }
+        &.wide {
+            width: 63%;
+        }
+        &--bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+        }
+        &--title {
+            font-weight: 500;
+            font-size: 2.4em;
+            line-height: 1.5em;
+            color: #fff;
+        }
+    }
+}
