@@ -331,3 +331,41 @@ html, body {
   line-height: 1.5em;
   color: #fff;
 }
+
+.earlier {
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+.earlier-wrapper {
+  text-align: center;
+}
+.earlier-carousel {
+  width: 100%;
+}
+.earlier-item {
+  position: re;
+  padding: 0 15px;
+  box-sizing: border-box;
+  max-width: 400px;
+}
+.earlier-img {
+  position: relative;
+  width: 370px;
+  height: 370px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.earlier-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.earlier-favorite {
+  position: absolute;
+  z-index: -10;
+  opacity: 0;
+}
+.earlier-favorite + label {
+  display: block;
+}
