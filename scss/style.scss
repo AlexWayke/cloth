@@ -11,6 +11,7 @@ html, body {
     font-size: 10px;
     width: 100%;
     min-height: 100vh;
+    color: #545155;
 }
 .container {
     max-width: 1200px;
@@ -285,8 +286,21 @@ html, body {
 
 // Earlier ============================
 .earlier {
+    position: relative;
     padding-top: 80px;
     box-sizing: border-box;
+    &-bg--title {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 400px);
+        text-align: center;
+        width: 800px;
+        font-family: Marck Script;
+        font-size: 16.8em;
+        line-height: 1.1em;
+        color: #BF1E7710;
+        z-index: -10;
+    }
     &-wrapper {
         text-align: center;
     }
@@ -297,32 +311,121 @@ html, body {
         padding: 0 15px;
         box-sizing: border-box;
         max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
     }
     &-img {
+        position: relative;
         width: 370px;
         height: 370px;
         border-radius: 10px;
         overflow: hidden;
+        margin-bottom: 24px;
         & img {
             object-fit: cover;
             width: 100%;
             height: 100%;
         }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #BF1E7700;
+            transition: background-color .3s ease;
+        }
+        &:hover::after {
+            background-color: #BF1E7780;
+        }
     }
     &-favorite {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+        z-index: 20;
+        cursor: pointer;
+        &+label {
+            display: inline-block;
+            user-select: none;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 24px;
+                right: 28px;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background: center no-repeat url(/src/icon/favorite.svg);
+            }
+        }
+        &:checked+label::before {
+            background: center no-repeat url(/src/icon/favoriteFill.svg);
+        }
     }
     &-subtitle {
+        font-size: 1.2em;
+        line-height: 1.5em;
     }
     &-title {
+        font-weight: 500;
+        font-size: 2.4em;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        color: #BF1E77;
     }
     &-attribute {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 25px;
+        & li {
+            font-weight: 600;
+            font-size: 1.6em;
+            line-height: 1.5em;
+            & span {
+                font-weight: 400;
+            }
+        }
     }
     &-price {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        width: 100%;
+        padding-top: 25px;
+        border-top: 1px solid #BF1E77;
         &--actual {
+            font-weight: 500;
+            font-size: 2.4em;
+            line-height: 1.5em;
+            margin-right: 20px;
         }
         &--old {
+            font-size: 1.6em;
+            line-height: 1.5em;
+            opacity: .3;
         }
         &--addtocart {
+            display: inline-block;
+            margin-left: auto;
+            font-size: 1.6em;
+            line-height: 1.5em;
+            color: #BF1E77;
+            &:hover {
+                color: #6e1044;
+            }
         }
     }
+}
+
+// Footer =============================
+.footer {
+    margin-top: 90px;
 }
