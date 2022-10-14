@@ -480,3 +480,106 @@ html, body {
 .footer {
   margin-top: 90px;
 }
+.subscribe {
+  color: #fff;
+}
+.subscribe-wrapper {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.subscribe-bg {
+  background-color: #BF1E77;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+.subscribe-bg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.08;
+}
+.subscribe-info {
+  max-width: 350px;
+}
+.subscribe-title {
+  margin-bottom: 20px;
+  font-size: 3.8em;
+  line-height: 1.5em;
+  font-weight: 500;
+}
+.subscribe-subtitle {
+  font-size: 1.6em;
+  line-height: 1.5em;
+}
+.subscribe-form {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: end;
+}
+.subscribe-form--group {
+  width: 100%;
+  display: flex;
+}
+.subscribe-form--group input {
+  flex: 1 1 auto;
+  border-radius: 4px;
+  padding: 13px 30px;
+  box-sizing: border-box;
+  outline: none;
+}
+.subscribe-form--group input::-moz-placeholder {
+  color: #BF1E77;
+}
+.subscribe-form--group input:-ms-input-placeholder {
+  color: #BF1E77;
+}
+.subscribe-form--group input::placeholder {
+  color: #BF1E77;
+}
+.subscribe-form p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+.subscribe-form p a {
+  text-decoration: underline;
+}
+.subscribe-btn {
+  position: relative;
+  display: inline-block;
+  padding: 0 90px 0 20px;
+  margin-left: 20px;
+  box-sizing: border-box;
+  background-color: #545155;
+  border-radius: 4px;
+  overflow: hidden;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+.subscribe-btn::after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 45px;
+  top: calc(50% - 4px);
+  right: 30px;
+  background: no-repeat url(/src/footer/arrowBtn.svg);
+}
+.subscribe-btn:hover {
+  background-color: #403e41;
+}
