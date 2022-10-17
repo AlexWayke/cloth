@@ -171,5 +171,21 @@
 }
 
 .slider__indicators li.active {
+  position: relative;
   background-color: #BF1E77;
+  text-indent: 10%;
+  font-size: 1.6em;
+  line-height: 1.5em;
+  color: #BF1E77;
+  padding-top: -100%;
+}
+.slider__indicators li.active p {
+  position: absolute;
+  top: -42px;
+  left: calc(50% - 25px);
+  display: block;
+}
+.slider__indicators li.active p span {
+  font-size: 3em;
+  font-weight: 300;
 }
