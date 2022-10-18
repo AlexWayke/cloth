@@ -532,9 +532,6 @@ html, body {
   border: 1px solid #545155;
   border-radius: 50%;
 }
-.footer-social a img {
-  width: 42%;
-}
 .footer-subtitle {
   margin-top: auto;
   font-size: 0.75em;
