@@ -20,6 +20,7 @@
   overflow: hidden;
   height: 100%;
 }
+
 .slider__wrapper.slider-2 {
   width: 100%;
   overflow: hidden;
@@ -30,6 +31,7 @@
   display: flex;
   transition: transform 0.5s ease;
   will-change: transform;
+  height: 100%;
 }
 
 .slider_disable-transition {
@@ -38,15 +40,19 @@
 
 .slider__item.slider-1 {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 100%;
   max-width: 100%;
   user-select: none;
+  align-content: center;
 }
 .slider__item.slider-1 img {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
-  height: 100%;
 }
+
 .slider__item.slider-2 {
   flex: 0 0 33.333333333%;
   user-select: none;
@@ -61,10 +67,9 @@
   font-weight: 500;
   top: 90px;
   right: 41.5vw;
-  /* width: 1395px; */
   margin-left: auto;
-  /* z-index: 10; */
 }
+
 
 /* кнопки влево и вправо */
 
@@ -188,4 +193,70 @@
 .slider__indicators li.active p span {
   font-size: 3em;
   font-weight: 300;
+}
+
+/* Adaptive */
+@media (max-width: 1500px) {
+  .slider__wrapper.slider-1 {
+    width: 100%;
+    border-radius: 0;
+  }
+  .slider__item.slider-2 {
+    flex: 0 0 50%;
+  }
+  .slider.slider-2 {
+    width: 800px;
+    margin: 0 auto;
+  }
+  .slider__buttons.slider-2 {
+    left: calc(50% - 500px);
+    width: 1000px;
+  }
+}
+@media (max-width: 1250px) {
+  .slider__control.slider-1{
+    display: none;
+  }
+  .slider__title.slider-1 {
+    left: 15px;
+    right: inherit;
+    font-size: 7em;
+  }
+  .slider__item.slider-1 img {
+    width: inherit;
+  }
+  .slider__item.slider-1 {
+    overflow: hidden;
+  }
+  .slider__controls.slider-1 {
+    justify-content: center;
+  }
+  .slider__buttons.slider-2 {
+    display: none;
+  }
+  .slider.slider-2 {
+    width: 720px;
+  }
+}
+@media (max-width: 740px) {
+  .slider__title.slider-1 {
+    font-size: 4.5em;
+    text-align: center;
+    width: 100%;
+  }
+  .slider.slider-2 {
+    width: 580px;
+  }
+}
+@media (max-width: 600px) {
+  .slider.slider-2 {
+    width: 290px;
+  }
+}
+@media (max-width: 450px) {
+  .slider__title.slider-1 {
+    font-size: 4em;
+    text-align: center;
+    width: 100%;
+  }
 }
