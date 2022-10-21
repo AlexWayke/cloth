@@ -38,6 +38,22 @@ html, body {
         font-size: 2.2em;
     }
 }
+.accordion-hide {
+    &.header-wrapper{        
+        @media (max-width: 1270px) {
+            height: 110px;
+            overflow-y: hidden;
+        }
+        @media (max-width: 740px) {
+            height: 95px;        
+        }
+    }
+    &.footer-section{        
+        @media (max-width: 1270px) {
+            height: 44px;   
+        }
+    }
+}
 
 // Header =============================
 .header {
@@ -242,15 +258,6 @@ html, body {
         }
         @media (max-width: 1270px) {
             margin: 20px 0 22px;
-        }
-    }
-    &-hide {
-        @media (max-width: 1270px) {
-            height: 110px;
-            overflow-y: hidden;
-        }
-        @media (max-width: 740px) {
-            height: 95px;        
         }
     }
 }
@@ -684,7 +691,6 @@ html, body {
             &:not(:last-child) {
                 overflow: hidden;
                 margin-bottom: 20px;
-                // height: 44px;
             }
         }
         &-title {

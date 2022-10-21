@@ -99,6 +99,23 @@ html, body {
   }
 }
 
+@media (max-width: 1270px) {
+  .accordion-hide.header-wrapper {
+    height: 110px;
+    overflow-y: hidden;
+  }
+}
+@media (max-width: 740px) {
+  .accordion-hide.header-wrapper {
+    height: 95px;
+  }
+}
+@media (max-width: 1270px) {
+  .accordion-hide.footer-section {
+    height: 44px;
+  }
+}
+
 @media (max-width: 740px) {
   .header {
     font-size: 0.8em;
@@ -332,17 +349,6 @@ html, body {
 @media (max-width: 1270px) {
   .header-menu {
     margin: 20px 0 22px;
-  }
-}
-@media (max-width: 1270px) {
-  .header-hide {
-    height: 110px;
-    overflow-y: hidden;
-  }
-}
-@media (max-width: 740px) {
-  .header-hide {
-    height: 95px;
   }
 }
 
