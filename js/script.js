@@ -1,9 +1,14 @@
 const accordionBtn = document.querySelectorAll('.accordion');
-const accordionContainer = document.querySelectorAll('.accordion-container');
 
-console.log(accordionContainer)
-const openAccordion = function(accordionContainer){
-
+const consoled = function() {
+    console.log('accept');
 }
 
-accordionBtn.forEach(e => e.addEventListener("click", openAccordion));
+const accordionOpen = function() {
+    this.closest('.accordion-container').classList.toggle('accordion-hide');
+}
+
+
+accordionBtn.forEach((e) => {
+    e.addEventListener("click", accordionOpen)
+})

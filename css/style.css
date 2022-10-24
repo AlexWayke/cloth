@@ -60,12 +60,27 @@ input {
 }
 
 html, body {
+  position: relative;
   font-family: Montserrat;
   font-size: 10px;
   width: 100%;
   min-height: 100vh;
   color: #545155;
   overflow-x: hidden;
+}
+
+main {
+  margin-top: 185px;
+}
+@media (max-width: 1250px) {
+  main {
+    margin-top: 110px;
+  }
+}
+@media (max-width: 740px) {
+  main {
+    margin-top: 95px;
+  }
 }
 
 .container {
@@ -99,27 +114,34 @@ html, body {
   }
 }
 
+.accordion-hide.header-wrapper {
+  transition: max-height 1s ease;
+}
 @media (max-width: 1270px) {
   .accordion-hide.header-wrapper {
-    height: 110px;
+    max-height: 110px;
     overflow-y: hidden;
   }
 }
 @media (max-width: 740px) {
   .accordion-hide.header-wrapper {
-    height: 95px;
+    max-height: 95px;
   }
 }
 @media (max-width: 1270px) {
   .accordion-hide.footer-section {
-    height: 44px;
+    max-height: 44px;
+    transition: max-height 1s ease;
   }
 }
 
-@media (max-width: 740px) {
-  .header {
-    font-size: 0.8em;
-  }
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: #fff;
+  width: 100%;
 }
 .header-title {
   color: #BF1E77;
@@ -138,6 +160,9 @@ html, body {
 .header-wrapper {
   display: flex;
   flex-direction: column;
+  max-height: 500px;
+  transition: max-height 1s ease;
+  overflow-y: hidden;
 }
 .header-top {
   display: flex;
@@ -349,6 +374,11 @@ html, body {
 @media (max-width: 1270px) {
   .header-menu {
     margin: 20px 0 22px;
+  }
+}
+@media (max-width: 740px) {
+  .header {
+    font-size: 0.8em;
   }
 }
 
@@ -779,6 +809,8 @@ html, body {
     margin-left: 18.4vw;
     padding-left: 50px;
     border-left: 1px solid #BF1E77;
+    max-height: 500px;
+    transition: max-height 1s ease;
   }
   .footer-section:not(:first-child) {
     padding-left: 50px;

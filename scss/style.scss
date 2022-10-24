@@ -7,12 +7,22 @@
 
 // Main scripts =======================
 html, body {
+    position: relative;
     font-family: Montserrat;
     font-size: 10px;
     width: 100%;
     min-height: 100vh;
     color: #545155;
     overflow-x: hidden;
+}
+main {
+    margin-top: 185px;
+    @media (max-width: 1250px) {
+        margin-top: 110px;
+    }
+    @media (max-width: 740px) {
+        margin-top: 95px;
+    }
 }
 .container {
     max-width: 1200px;
@@ -39,27 +49,33 @@ html, body {
     }
 }
 .accordion-hide {
-    &.header-wrapper{        
+    &.header-wrapper{
+        transition: max-height 1s ease;    
         @media (max-width: 1270px) {
-            height: 110px;
+            max-height: 110px;
             overflow-y: hidden;
         }
         @media (max-width: 740px) {
-            height: 95px;        
+            max-height: 95px;        
         }
     }
     &.footer-section{        
         @media (max-width: 1270px) {
-            height: 44px;   
+            max-height: 44px; 
+            transition: max-height 1s ease;  
         }
     }
 }
 
 // Header =============================
 .header {
-    @media (max-width: 740px) {
-        font-size: 0.8em;
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: #fff;
+    width: 100%;
+    
     &-title {
         color: #BF1E77;
         display: inline-block;
@@ -73,6 +89,9 @@ html, body {
     &-wrapper {
         display: flex;
         flex-direction: column;
+        max-height: 500px;
+        transition: max-height 1s ease; 
+        overflow-y: hidden; 
     }
     &-top {
         display: flex;
@@ -259,6 +278,9 @@ html, body {
         @media (max-width: 1270px) {
             margin: 20px 0 22px;
         }
+    }
+    @media (max-width: 740px) {
+        font-size: 0.8em;
     }
 }
 
@@ -685,6 +707,8 @@ html, body {
             margin-left: 18.4vw;
             padding-left: 50px;
             border-left: 1px solid #BF1E77;
+            max-height: 500px;
+            transition: max-height 1s ease;
             &:not(:first-child){
                 padding-left: 50px;
             }
