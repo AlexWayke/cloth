@@ -116,7 +116,7 @@ main {
             left: 0;
             height: 16px;
             width: 16px;
-            background: no-repeat url(/src/icon/location.svg);
+            background: no-repeat url(./src/icon/location.svg);
         }
         @media (max-width: 1270px) {
             order: 3;
@@ -541,11 +541,11 @@ main {
                 display: inline-block;
                 width: 30px;
                 height: 30px;
-                background: center no-repeat url(/src/icon/favorite.svg);
+                background: center no-repeat url(./src/icon/favorite.svg);
             }
         }
         &:checked+label::before {
-            background: center no-repeat url(/src/icon/favoriteFill.svg);
+            background: center no-repeat url(./src/icon/favoriteFill.svg);
         }
     }
     &-subtitle {
@@ -820,7 +820,7 @@ main {
             width: 45px;
             top: calc(50% - 4px);
             right: 30px;
-            background: no-repeat url(/src/footer/arrowBtn.svg);
+            background: no-repeat url(./src/footer/arrowBtn.svg);
         }
         &:hover {
             background-color: #403e41;
@@ -860,7 +860,7 @@ main {
             &::after {
                 top: calc(50% - 4px);
                 right: 20px;
-                background: no-repeat url(/src/footer/arrowBtn.svg);
+                background: no-repeat url(./src/footer/arrowBtn.svg);
             }
         }
     }
